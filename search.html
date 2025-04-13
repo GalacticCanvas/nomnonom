@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PRISMAPRO - Beranda</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navbar Start-->
+    <nav class="navbar">
+      <div>
+        <img src="img/logo.png" alt="Logo" />
+        <a href="#" class="navbar-logo">PRISMAPRO</a>
+      </div>
+
+      <div>
+        <class="<navbar-nav">
+        <a href="#index">Home</a>
+        <a href="#search">Pencarian</a>
+        <a href="#gallery">Properti</a>
+        <a href="#about">Tentang Kami</a>
+      </div>
+     
+      <div>
+        <div class="user-icon"></div>
+        <a href="#akun" title="Akun Saya"><i class="fas fa-user-circle"></i></a>
+      </div>
+    </nav>
+    
+    <div class="user-dropdown">
+        <i class="fas fa-user-circle" id="userIcon"></i>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <a href="#profil"><i class="fas fa-user"></i> Profil</a>
+          <a href="#pengaturan"><i class="fas fa-cog"></i> Pengaturan</a>
+          <a href="#keluar"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+        </div>
+      </div>
+      
+
+    <!-- Navbar End-->
+    </header>
+
+     <!-- Hero Start-->
+    <!-- Sidebar Kategori -->
+<div class="sidebar">
+    <ul>
+      <li><a href="#dijual"><i class="fas fa-home"></i> Properti Dijual</a></li>
+      <li><a href="#disewakan"><i class="fas fa-key"></i> Properti Disewakan</a></li>
+  
+      
+      <h3 class="kategori-title"><i class="fas fa-hotel"></i> Hotel</h3>
+      <li><a href="#hotel1"><i ></i> Hotel ★</a></li>
+      <li><a href="#hotel2"><i></i> Hotel ★★</a></li>
+      <li><a href="#hotel1"><i ></i> Hotel ★★★</a></li>
+      <li><a href="#hotel2"><i></i> Hotel ★★★★</a></li> 
+      <li><a href="#hotel2"><i></i> Hotel ★★★★★</a></li>   
+      <li><a href="#wisma"><i class="fas fa-bed"></i> Wisma</a></li>
+      <li><a href="#villa"><i class="fas fa-tree"></i> Vila</a></li>
+      <li><a href="#kapsul"><i class="fas fa-cube"></i> Hotel Kapsul</a></li>
+    </ul>
+  </div>
+  
+          <!-- Hero End-->
+
+      <div id="map">
+        <!-- Map interaktif di sini -->
+      </div>
+    </div>
+    <script>
+        const userIcon = document.getElementById('userIcon');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+      
+        userIcon.addEventListener('click', function () {
+          dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+      
+        // Menutup dropdown kalau klik di luar
+        window.addEventListener('click', function(e) {
+          if (!userIcon.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.style.display = 'none';
+          }
+        });
+      </script>
+      
+  </body>
+</html>
